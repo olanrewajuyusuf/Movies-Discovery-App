@@ -5,15 +5,12 @@ import { IoIosArrowForward } from "react-icons/io"
 import '../Styles/topMovies.css'
 
 
-let uri = 'https://api.themoviedb.org/3/movie/popular?api_key=a651e6fc86c0c188ee35ef4e1d564d11';
+let uri = 'https://api.themoviedb.org/3/movie/top_rated?api_key=a651e6fc86c0c188ee35ef4e1d564d11';
 
 const TopMovies = ({ isLoading, searchResults, search}) => {
 
   // Getting data from useFetch custom hook
-  const { data: topMovies, loading, errorMessage } = useFetch(uri)
-
-  // console.log(movies);
-  // const topMovies = movies.results;
+  const { data: topMovies, loading, errorMessage } = useFetch(uri);
 
   return (
     <div className="movies-wrapper">

@@ -12,7 +12,7 @@ const HomePage = ({handleMenu}) => {
     setSearch(e.target.value);
   }
 
-  const url = 'https://api.themoviedb.org/3/movie/popular?api_key=a651e6fc86c0c188ee35ef4e1d564d11';
+  const url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=a651e6fc86c0c188ee35ef4e1d564d11';
 
   async function fetchSearchResults(title) {
     try {
