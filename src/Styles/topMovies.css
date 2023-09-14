@@ -1,0 +1,105 @@
+/* ====== Desktop mode design ====== */
+
+.movies-wrapper {
+    padding: 3rem 5rem;
+}
+
+.movies-wrapper h2,
+.movies-wrapper h2 span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movies-wrapper h2 span {
+    font-size: 18px;
+    justify-content: center;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.movies-wrapper .top-movies {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: center;
+    gap: 3.5rem;
+    line-height: 1.5rem;
+}
+.movies-wrapper .top-movies * {
+    margin: 0;
+    padding: 3px 0;
+}
+.movies-wrapper .top-movies a {
+    text-decoration: none;
+}
+.movies-wrapper .top-movies h3 {
+    color: var(--title-color);
+}
+.movies-wrapper .top-movies p {
+    color: #9CA3AF;
+}
+
+[data-testid='movie-card'] {
+    position: relative;
+}
+[data-testid='movie-poster'] {
+    width: 100%;
+}
+[data-testid='movie-poster'] img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.movies-wrapper .top-movies .rating,
+.movies-wrapper .top-movies .rating span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.movies-wrapper .top-movies .rating span {
+    gap: 10px;
+    color: var(--text-color);
+}
+
+[data-testid='movie-card'] .icon {
+    position: absolute;
+    top: 15px;
+}
+[data-testid='movie-card'] .tmdb {
+    width: 50px;
+    left: 15px;
+}
+[data-testid='movie-card'] .love-icon {
+    padding: 10px;
+    border-radius: 50%;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* BREAK POINT */
+
+/* ====== Tablet mode design ====== */
+@media (max-width: 1000px) {
+    .movies-wrapper .top-movies {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+    }
+}
+@media (max-width: 850px) {
+    .movies-wrapper {
+        padding: 3rem 3.5rem;
+    }
+    .movies-wrapper .top-movies {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+}
+
+/* ====== Mobile mode design ====== */
+@media (max-width: 600px) {
+    .movies-wrapper {
+        padding: 3rem 30px;
+    }
+    
+    .movies-wrapper .top-movies {
+        grid-template-columns: minmax(0, 1fr)
+    }
+}

@@ -1,0 +1,39 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8rem 0 5rem;
+}
+
+footer .social-icon,
+footer .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+footer span {
+    color: var(--text-color);
+}
+
+footer .tmdb-logo {
+    width: 100px;
+    margin-top: 20px;
+}
+
+/* ====== BREAK POINT ====== */
+
+/* ====== Mobile mode design ====== */
+@media (max-width: 450px) {
+    footer .social-icon {
+       gap: 1.5rem;
+    }
+    footer .links {
+        flex-direction: column;
+        gap: 0;
+        margin: 20px 0 10px;
+        line-height: 0;
+    }
+}

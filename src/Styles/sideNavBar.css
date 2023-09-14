@@ -1,0 +1,91 @@
+.sidebar {
+    width: 226px;
+    border: 1px solid #00000070;
+    border-radius: 0 45px 45px 0;
+    padding: 4rem 0;
+    color: var(--text-color);
+}
+.sidebar .logo-2 {
+    margin: 0 20px 30px;
+}
+.sidebar ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.sidebar ul li {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    padding: 20px 0 20px 3rem;
+}
+.sidebar ul .active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-right: 3px solid var(--primary-color);
+}
+
+.sidebar .ticket {
+    border: 1px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 2rem 1rem .8rem;
+    margin: 30px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+.sidebar .ticket small {
+    text-align: left;
+}
+.sidebar .ticket span {
+    font-weight: lighter;
+    font-size: 13px;
+}
+.sidebar .ticket button {
+    display: block;
+    padding: 0 15px;
+    margin-top: 10px;
+    margin-inline: auto;
+    color: var(--primary-color);
+    border: none;
+    background-color: #be123d42;
+    border-radius: 30px;
+}
+
+@media (max-width: 850px) {
+    .sidebar {
+        width: 100%;
+        border-radius: 5px 5px 45px 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+    }
+    .sidebar .logo-2 {
+        width: 150px;
+        margin: 0;
+    }
+    .sidebar ul {
+        width: unset;
+    }
+    .sidebar ul li {
+        padding: 0;
+        margin: 0;
+        width: unset;
+    }
+    .sidebar .ticket, .sidebar .navbar {
+        display: none;
+    }
+}
+@media (max-width: 450px) {
+    .sidebar {
+        padding-inline: 15px;
+    }
+    .sidebar .logo-2 {
+        width: 120px;
+    }
+}

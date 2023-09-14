@@ -1,0 +1,190 @@
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    margin: 10px 30px 10px 5px;
+}
+
+
+.movie-details .movie-image .poster {
+    width: 100%;
+}
+
+.movie-details .movie-image .details-wrapper,
+.movie-details .movie-image .details,
+.movie-details .movie-image .details .rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+.movie-details .movie-image .details {
+    margin: -30px 20px;
+}
+.details span {
+    color: #404040;
+    font-size: 23px;
+}
+.details .dot {
+    width: 5px;
+    height: 5px;
+    background-color: #404040;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.details .btn {
+    margin-left: 10px;
+}
+
+
+.details button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid #d1cfcf;
+    border-radius: 30px;
+    padding: 0 15px;
+    margin: 0 5px;
+    font-weight: 700;
+}
+.details-wrapper .rating span {
+    color: #d1cfcf;
+    margin: 0 5px;
+}
+
+.movie-details .overview {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    line-height: 1.5rem;
+    color: var(--text-color);
+    padding: 20px;
+    font-size: 18px;
+}
+.movie-details .overview p {
+    margin: 20px 0;
+}
+.movie-details .overview p span {
+    color: var(--primary-color);
+}
+.movie-details .overview .btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #d1cfcf;
+    border-radius: 7px;
+    padding: 7px 20px 7px 0;
+}
+.movie-details .overview .btn .arrow {
+    font-size: 35px;
+}
+.movie-details .overview .btn span:first-of-type {
+    background-color: var(--primary-color);
+    padding: 13px 20px;
+    margin-right: 20px;
+    border-radius: 7px;
+    color: var(--main-color);
+}
+.movie-details .overview button {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--main-color);
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.movie-details .overview button:last-of-type {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+
+/* ======= Break Point ======= */
+@media (max-width: 1150px) {
+    .movie-details .movie-image .details span {
+        font-size: 20px;
+    }
+    
+    .movie-details .overview {
+        font-size: 14px;
+    }
+    .movie-details .overview .btn span:first-of-type {
+        padding: 13px 10px;
+        margin-right: 10px;
+    }
+}
+
+/* ======= Break Point ======= */
+@media (max-width: 950px) {
+    main {
+        align-items: flex-start;
+    }
+    .movie-details .movie-image .details-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .movie-details .overview {
+        grid-template-columns: 1fr;
+        font-size: 18px;
+    }
+    .movie-details .overview .btn span:first-of-type {
+        padding: 13px 20px;
+        margin-right: 20px;
+    }
+    
+}
+
+/* ======= Break Point ======= */
+@media (max-width: 850px) {
+    main {
+        flex-direction: column;
+        margin-inline: 30px;
+    }
+}
+
+/* ======= Break Point ======= */
+@media (max-width: 570px) {
+    .detail-poster {
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .movie-details .movie-image .details span {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .movie-details .overview .btn {
+        font-size: 14px;
+        padding-right: 10px;
+    }
+    .movie-details .overview .btn .arrow {
+        font-size: 20px;
+    }
+    .movie-details .overview .btn span:first-of-type {
+        padding: 13px 10px;
+        margin-right: 10px;
+    }
+}
+
+/* ======= Break Point ======= */
+@media (max-width: 430px) {
+    .movie-details .overview .btn {
+        font-size: 13px;
+        padding-right: 5px;
+    }
+    .movie-details .overview .btn .arrow {
+        font-size: 15px;
+    }
+    .movie-details .overview .btn span:first-of-type {
+        padding: 13px 5px;
+        margin-right: 5px;
+    }
+}

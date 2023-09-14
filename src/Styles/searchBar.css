@@ -1,0 +1,19 @@
+.search {
+    width:  48%;
+}
+.search input {
+    width: 100%;
+    background-color: transparent;
+    padding: 0 10px;
+    outline: 0;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 7px;
+}
+.search input::placeholder {
+    color: var(--main-color);
+}
+
+@media (max-width: 600px) {
+
+}

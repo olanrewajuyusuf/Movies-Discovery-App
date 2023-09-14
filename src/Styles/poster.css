@@ -1,0 +1,183 @@
+.poster {
+    position: relative;
+}
+.poster .poster-img {
+    width: 100%;
+    object-fit: cover;
+}
+.poster nav {
+    width: 87%;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--main-color);
+}
+
+.menu-box, .content .rating, 
+.content .rating span, 
+.content button, .content-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.menu-box .menu-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 25px;
+    background-color: var(--primary-color);
+    display: grid;
+    place-items: center;
+}
+
+.content-box {
+    position: absolute;
+    top: 20%;
+    left: 7%;
+    color: var(--main-color);
+}
+.content h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3.2rem;
+    letter-spacing: 3px;
+}
+.content .rating {
+    justify-content: flex-start;
+    font-weight: 300;
+    margin-top: -25px;
+}
+.content .rating span {
+    font-size: 12px;
+    gap: 7px;
+}
+.content p {
+    width: 28%;
+    line-height: 1.5rem;
+    margin-top: 10px;
+}
+.content button {
+    padding: 5px 20px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--main-color);
+    gap: 10px;
+    border-radius: 8px;
+}
+
+.pagination-box {
+    margin-right: 20px;
+}
+.pagination-box ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-color);
+    margin: -10px 0;
+}
+.pagination-box ul li div {
+    width: 15px;
+    height: 3px;
+    background-color: transparent;
+}
+.pagination-box ul .active,
+.pagination-box ul li:hover {
+    color: var(--main-color);
+}
+.pagination-box ul .active div,
+.pagination-box ul li:hover div {
+    background-color: var(--main-color);
+}
+
+/* BREAK POINT */
+
+@media (max-width: 1200px) {
+    .content h1 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+    .content .rating {
+        margin-top: -15px;
+    }
+    .content .rating span {
+        font-size: 12px;
+        gap: 7px;
+    }
+    .content p {
+        font-size: 14px;
+        line-height: 1.2rem;
+        margin-top: 5px;
+    }
+}
+
+/* ====== Tablet mode design ====== */
+@media (max-width: 1000px) {
+    .content p {
+        width: 50%;
+    }
+}
+
+@media (max-width: 850px) {
+    .poster .logo {
+        width: 150px;
+    }
+    .menu-box .menu-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+    .content h1 {
+        font-size: 1.7rem;
+    }
+    .content p {
+        width: 60%;
+    }
+    .content button {
+        padding: 0 10px;
+        gap: 5px;
+    }
+}
+
+/* ====== Mobile mode design ====== */
+@media (max-width: 750px) {
+
+    .poster-img {
+        height: 300px;
+        object-fit: cover;
+    }
+    .content-box {
+        position: relative;
+        left: unset;
+        margin: 0 3.7rem;
+    }
+    .content-box * {
+        color: #404040;
+    }
+    .pagination-box {
+        display: none;
+    }
+    
+    .content h1 {
+        font-size: 2rem;
+    }
+    .content p {
+        width: 100%;
+        font-size: 16px;
+    }
+    .content button {
+        padding: 5px 15px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .content-box {
+        margin: 0 30px;
+    }
+}
