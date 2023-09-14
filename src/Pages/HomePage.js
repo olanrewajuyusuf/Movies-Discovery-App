@@ -7,7 +7,6 @@ const HomePage = ({handleMenu}) => {
   const [search, setSearch] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  // const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     setSearch(e.target.value);

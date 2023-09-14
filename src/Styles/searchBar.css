@@ -15,5 +15,10 @@
 }
 
 @media (max-width: 600px) {
-
+    .search {
+        width:  100%;
+        position: absolute;
+        left: 0;
+        top: 120%;
+    }
 }

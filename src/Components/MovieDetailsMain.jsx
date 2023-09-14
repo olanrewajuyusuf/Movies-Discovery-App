@@ -25,15 +25,22 @@ const MovieDetailsMain = () => {
             <img src="/images/Group 56.png" alt="poster" className='poster detail-poster'/>
             
             <div className="details-wrapper">
-                 
+
+                 {/* ===== Movie details include title, date and time in UTC ===== */}
                 <span className='details'>
+                    {/* ===== Movie Title ===== */}
                     <span data-testid='movie-title' >{details.title}</span>
-                    <div className='dot'></div>
-                    <span>
+                    
+                    <span className='date-time'>
+                      <div className='dot'></div>
+
+                      {/* ===== Release Date ===== */}
                       <span data-testid='movie-release-date' >{details.release_date}</span>
                       <div className='dot'></div>
-                      <span data-testid='movie-release-date' >PG-13</span>
+                      <span >PG-13</span>
                       <div className='dot'></div>
+
+                      {/* ====== Movie Runtime ====== */}
                       <span data-testid='movie-runtime' >{details.runtime}</span>
                     </span>
                     
@@ -48,6 +55,8 @@ const MovieDetailsMain = () => {
                    | 350k
                 </div>
             </div>
+
+            {/* ====== Movie Overview ====== */}
             <div className="overview">
                 <section>
                     <p data-testid='movie-overview' >{details.overview}</p>
