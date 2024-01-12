@@ -30,19 +30,19 @@ Follow these steps to install and run the application:
 
 1 Clone the repository to your local machine:
 
-{git clone https://github.com/your-username/movie-discovery-app.git}
+`git clone https://github.com/your-username/movie-discovery-app.git`
 
 2 Navigate to the project directory:
 
-{cd movie-discovery-app}
+`cd movie-discovery-app`
 
 3 Install the required dependencies:
 
-{npm install}
+`npm install`
 
 4 Start the development server:
 
-{npm start}
+`npm start`
 
 5 Open your web browser and visit http://localhost:3000 to access the Movie Discovery Web Application.
 
@@ -87,7 +87,11 @@ Follow these steps to install and run the application:
 Contributions are welcome! If you would like to contribute to this project, please follow these steps:
 
 1 Fork the repository.
+
 2 Create a new branch for your feature or bug fix: git checkout -b feature/new-feature.
+
 3 Make your changes and commit them: git commit -m "Add new feature".
+
 4 Push to your branch: git push origin feature/new-feature.
+
 5 Create a pull request to the main repository.
