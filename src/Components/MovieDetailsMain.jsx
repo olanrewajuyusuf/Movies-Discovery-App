@@ -2,7 +2,7 @@ import '../Styles/movieDetailMain.css';
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import { useParams } from 'react-router-dom';
-import useFetch from '../Utility/useFetch';
+import useFetch from '../hooks/useFetch';
 
 
 const MovieDetailsMain = () => {

@@ -1,32 +1,15 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { getFromLocalStorage, saveToLocalStorage } from '../Utility/localStorage';
 
 const MovieCard = ({ topMovies, isLoading, searchResults, search }) => {
-  
-  // Initialize favorite status for each movie based on local storage
-  const initialFavorites = topMovies.results.slice(0, 10).map(movie => ({
-    id: movie.id,
-    isFavorite: getFromLocalStorage('favoriteMovies')?.includes(movie.id) || false,
-  }));
-
-  const [favoriteMovies, setFavoriteMovies] = useState(initialFavorites);
+  const [favoriteMovies, setFavoriteMovies] = useState({});
 
   const toggleFavorite = (movieId) => {
-    // Find the movie in the favoriteMovies array
-    const updatedFavorites = favoriteMovies.map(movie => {
-      if (movie.id === movieId) {
-        // Toggle the isFavorite status
-        const isFavorite = !movie.isFavorite;
-        saveToLocalStorage('favoriteMovies', isFavorite ? [...getFromLocalStorage('favoriteMovies'), movieId] : getFromLocalStorage('favoriteMovies').filter(id => id !== movieId));
-        return { ...movie, isFavorite };
-      }
-      return movie;
-    });
-
-    // Update the favoriteMovies state
-    setFavoriteMovies(updatedFavorites);
-  };
+    setFavoriteMovies((prev) => ({
+      ...prev,
+      [movieId]: !prev[movieId],
+    }));
+  }
 
   return (
     <>
@@ -60,7 +43,7 @@ const MovieCard = ({ topMovies, isLoading, searchResults, search }) => {
               <p>Action, Adventure, Drama</p>
               <img src="images/TMDB.svg" alt="TMDB Logo" className="icon tmdb" />
               <img
-                style={{ backgroundColor: favoriteMovies.find(m => m.id === movie.id)?.isFavorite ? "red" : "#9CA3AF" }}
+                style={{ backgroundColor: favoriteMovies[movie.id] ? "red" : "#9CA3AF" }}
                 src="images/Icon.svg"
                 alt="Love Icon"
                 className="icon love-icon"
@@ -94,7 +77,7 @@ const MovieCard = ({ topMovies, isLoading, searchResults, search }) => {
                 <p>Action, Adventure, Drama</p>
                 <img src="images/TMDB.svg" alt="TMDB Logo" className="icon tmdb" />
                 <img
-                  style={{ backgroundColor: favoriteMovies.find(m => m.id === movie.id)?.isFavorite ? "red" : "#9CA3AF" }}
+                  style={{ backgroundColor: favoriteMovies[movie.id] ? "red" : "#9CA3AF" }}
                   src="images/Icon.svg"
                   alt="Love Icon"
                   className="icon love-icon"

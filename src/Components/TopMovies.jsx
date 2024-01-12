@@ -1,4 +1,4 @@
-import useFetch from "../Utility/useFetch"
+import useFetch from "../hooks/useFetch"
 import MovieCard from "./MovieCard"
 import { IoIosArrowForward } from "react-icons/io"
  
